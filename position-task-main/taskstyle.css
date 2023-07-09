@@ -1,0 +1,33 @@
+.section-fist-task {
+    display: flex;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+/*position must be relative*/
+
+.section-fist-task-red-block {
+    position: absolute;
+    background-color: red;
+    width: 250px;
+    height: 250px;
+    left: 370px;
+    top: 130px;
+}
+/* Here it was written margin-left: 29px,
+    but should be correct left: 29px and position:absolute*/
+    
+.section-fist-task-green-block {
+    position: absolute;
+    background-color: green;
+    width: 250px;
+    height: 250px;
+    right: 370px;
+    top: 130px;
+}
+/* Position: fixed was written here,
+    but it must be the correct position: absolute,
+    because the element must be
+    positioned relative to the parent*/
+/* Here it was written margin-right: , 
+    but it should be correct right:*/

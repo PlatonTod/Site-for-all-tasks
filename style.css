@@ -1,0 +1,341 @@
+#GlobalMenu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 125px;
+    z-index: 90;
+    user-select: none;
+    overflow-y: auto;
+    will-change: opacity
+}
+
+#GlobalMenu ::selection {
+    color: #000;
+    background-color: hsla(0,0%,100%,.75)
+}
+
+li {
+    list-style-type: none
+}
+
+.f-d {
+    font-family: ddn,vdl-v7mincho,serif;
+    font-style: normal
+}
+
+
+.f-m_b {
+    font-weight: 800
+}
+
+::selection {
+    color: #fff;
+    background-color: #000
+}
+
+.m-menu_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    will-change: opacity
+}
+
+#GlobalMenu,#GlobalMenu a {
+    color: #fff
+}
+
+.m-menu {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%
+}
+
+.m-menu_head {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.m-menu_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 43%;
+    height: 100%;
+    padding-left: 6.59vw;
+    padding-bottom: 13vh
+}
+
+.m-menu_list {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.m-menu_list_item {
+    width: 100%;
+    height: 100px
+}
+
+.m-menu_list_item a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.m-menu_list_line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    right: 0;
+    background-color: hsla(0,0%,100%,.2);
+    /* animation-name: line-animation-end; 
+    animation-duration: 1s;
+    animation-direction: reverse; */
+    overflow: hidden
+}
+
+.white-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    right: 0;
+    background-color: white;
+    animation-name: line-animation-end; 
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+    overflow: hidden;
+    animation-fill-mode: forwards;
+}
+
+body {
+    min-width: 320px;
+    color: #000;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.m-menu_list_item:hover .white-line {
+    animation-name: line-animation-start;
+    animation-duration: 0.7s;
+    animation-direction: reverse;
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+@keyframes line-animation-end {
+    0%{
+        width: 0%;
+        background-color: #fff;
+    }
+    100%{
+        width: 100%;
+        background-color: #fff;
+    }
+}
+
+@keyframes line-animation-start {
+    0%{
+        width: 100%;
+        background-color: #fff;
+    }
+    100%{
+        width: 0%;
+        background-color: #fff;
+    }
+}
+
+.m-menu_list_line.-l {
+    animation: none;
+    background-color: #fff;
+    right: auto;
+    left: 0
+}
+
+.m-menu_list_head {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: auto;
+    padding-right: 10px;
+    white-space: nowrap;
+    transition: opacity 1s linear,transform 1s cubic-bezier(.2,1,.175,1)
+}
+
+.m-menu_list_head_title-en,.m-menu_list_head_title-ja {
+    display: inline-block;
+    line-height: 1;
+    overflow: hidden
+}
+  
+
+.m-menu_list_head_title-ja {
+    margin-bottom: 5px;
+    font-size: 5.83333vw;
+    letter-spacing: .05em
+}
+
+.m-menu_list_head_title-en {
+    font-size: 1.38889vw;
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.m-menu_list_head_title-en1{
+    display: inline-block;
+    line-height: 1;
+    overflow: hidden;
+    font-size: 1.38889vw;
+    position: relative;
+    margin-bottom: 1.5%;
+}
+
+.js-split_block {
+    width: .5em;
+    font-size: 5.69444vw;
+    line-height: .8;
+    text-align: left;
+    overflow: hidden
+}
+
+.js-split_inner {
+    width: 100%
+}
+
+/* .BodyContactPage .m-menu_list_item.-contact a,.BodyHomePage .m-menu_list_item.-home a,.BodyProjectsHomeOriginPage .m-menu_list_item.-projects a,.BodyWhoWeArePage .m-menu_list_item.-wwa a {
+    pointer-events: none
+}
+
+.BodyContactPage .m-menu_list_item.-contact .m-menu_list_line:after,.BodyHomePage .m-menu_list_item.-home .m-menu_list_line:after,.BodyProjectsDetailPage .m-menu_list_item.-projects .m-menu_list_line:after,.BodyProjectsHomeOriginPage .m-menu_list_item.-projects .m-menu_list_line:after,.BodyProjectsHomePage .m-menu_list_item.-projects .m-menu_list_line:after,.BodyWhoWeArePage .m-menu_list_item.-wwa .m-menu_list_line:after {
+    transform: scaleY(1)
+} */
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+.m-menu_info_head {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    line-height: 1
+}
+
+.m-menu_info_title-ja {
+    margin-right: 25px;
+    font-size: 2.08333vw;
+    letter-spacing: .18em;
+    overflow: hidden
+}
+
+.m-menu_info_title-en {
+    height: 2.08333vw;
+    font-size: 16px;
+    letter-spacing: .18em;
+    line-height: 1.25;
+    overflow: hidden
+}
+
+.m-menu_info_title-en_inner {
+    display: flex;
+    align-items: flex-end;
+    height: 100%
+}
+
+.m-menu_info_description {
+    margin-bottom: 100px
+}
+
+.m-menu_info_description p.-ja {
+    font-size: 14px;
+    letter-spacing: .02em;
+    line-height: 1.862
+}
+
+.m-menu_info_description p.-en {
+    font-size: 17px;
+    line-height: 1.278
+}
+
+.m-menu_info_description p:not(:last-of-type) {
+    margin-bottom: 15px
+}
+
+.m-menu_info_foot {
+    display: flex;
+    margin-top: -20px;
+    margin-left: -10px;
+    margin-bottom: -20px;
+    align-items: center
+}
+
+.m-menu_info_foot_icon {
+    display: inline-block;
+    padding: 20px 10px
+}
+
+.m-menu_info_foot_icon_inner {
+    overflow: hidden;
+    line-height: 1
+}
+
+.m-menu_info_foot_icon svg {
+    opacity: .5
+}
+
+.m-menu_info_foot_icon.-note svg {
+    width: 12px;
+}
+
+.m-menu_list_head {
+    position: absolute;
+    top: 0;
+    left: 0; /* Изменено с right: 0 на left: 0 */
+    margin-right: auto; /* Добавлено свойство */
+    padding-left: 10px; /* Добавлено свойство */
+    white-space: nowrap;
+    transition: opacity 1s linear, transform 1s cubic-bezier(.2, 1, .175, 1);
+}
+
+.m-menu_list_head_title-ja {
+    margin-bottom: 5px;
+    font-size: 5.83333vw;
+    letter-spacing: .05em;
+}
+
+.m-menu_list_head_title-en {
+    font-size: 1.38889vw;
+    position: relative;
+    margin-bottom: 1%;
+    text-align: left; /* Добавлено свойство */
+}
+
+.m-menu_list_head_title-en1 {
+    display: inline-block;
+    line-height: 1;
+    overflow: hidden;
+    font-size: 1.38889vw;
+    position: relative;
+    margin-bottom: 1%;
+    text-align: left; /* Добавлено свойство */
+}
+
